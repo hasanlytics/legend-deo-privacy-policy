@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Legend DEO</title>
+<style>
+  body {
+    font-family: 'Segoe UI', 'Noto Sans Bengali', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    line-height: 1.7;
+    color: #222;
+    background: #fff;
+  }
+  h1 { font-size: 28px; margin-bottom: 4px; color: #12633D; }
+  .updated { color: #777; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 20px; margin-top: 36px; color: #12633D; border-bottom: 2px solid #e3f0e7; padding-bottom: 6px; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f0faf4; color: #12633D; }
+  .contact-box { background: #f0faf4; border: 1px solid #cdeada; border-radius: 8px; padding: 16px 18px; margin-top: 10px; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  footer { margin-top: 60px; font-size: 13px; color: #999; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — Legend DEO</h1>
+<p class="updated">Last updated: July 27, 2026</p>
+
+<p>
+Legend DEO ("the Extension", "we", "our") is a Chrome browser extension built to
+speed up and reduce errors in data-entry work on the Bangladesh Land Development
+Tax portal (<code>ldtax.gov.bd</code>). This policy explains what data the
+Extension accesses, how it is used, where it is stored, and who it is shared
+with.
+</p>
+
+<h2>1. Summary</h2>
+<ul>
+  <li>All holding, khatian, owner-name, address, NID, phone, and land-share data you enter or copy stays <strong>only on your own device</strong>, inside your browser's local storage. We do not operate a server that receives or stores this information.</li>
+  <li>The only information transmitted off your device is a <strong>license key</strong> and an <strong>anonymous, randomly generated device identifier</strong>, used solely to verify that your license is valid and to enforce single-device use.</li>
+  <li>We do not sell, rent, or share your data with advertisers or data brokers. There is no advertising and no analytics/tracking of your browsing activity.</li>
+</ul>
+
+<h2>2. Data We Collect and Why</h2>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Purpose</th>
+    <th>Where it is stored</th>
+  </tr>
+  <tr>
+    <td>Land holding data you copy/enter: holding number, khatian number, mouja, land survey type, ownership source, owner name(s), father's/husband's name, address, NID number, phone number, email, land ownership share</td>
+    <td>To auto-fill repetitive fields on the ldtax.gov.bd holding-entry and holding-edit forms, and to let you re-use previously entered owner/holding profiles across multiple entries</td>
+    <td>Locally on your device only (<code>chrome.storage.local</code> / browser <code>localStorage</code>). Never sent to Legend DEO or any third-party server.</td>
+  </tr>
+  <tr>
+    <td>Extension settings and preferences (which features are on/off, default text values, saved comment templates, floating-button positions)</td>
+    <td>To remember your configuration between sessions</td>
+    <td>Locally on your device only</td>
+  </tr>
+  <tr>
+    <td>License key (that you purchase/receive) and a randomly generated device identifier (UUID, not linked to your name or identity)</td>
+    <td>To verify your license is active and to bind it to one device, preventing unauthorized sharing of a single license</td>
+    <td>Sent to our license-verification database (Google Firebase Realtime Database, hosted in the <code>asia-southeast1</code> region) over an encrypted connection. Stored there only for license-validation purposes.</td>
+  </tr>
+</table>
+
+<h3>What we do NOT collect</h3>
+<ul>
+  <li>We do not collect your name, email, or any personal identity information tied to you as a person — only the license key you use and a random device ID.</li>
+  <li>We do not track which websites you visit outside of <code>ldtax.gov.bd</code>.</li>
+  <li>We do not use cookies, advertising identifiers, or third-party analytics/tracking scripts.</li>
+  <li>We do not read, collect, or transmit the content of any other webpage, file, email, or document on your computer.</li>
+</ul>
+
+<h2>3. How Data Is Handled</h2>
+<p>
+Data you type into the Extension's panels (owner names, addresses, holding numbers, etc.)
+is written directly to your browser's built-in local storage APIs
+(<code>chrome.storage.local</code> and <code>window.localStorage</code>).
+This storage is sandboxed to your browser profile and is not accessible to
+Legend DEO, to other websites, or to other extensions. It is only read back
+by the Extension itself to fill forms on the ldtax.gov.bd site on your
+instruction (e.g., clicking a checkbox or a fill/entry button).
+</p>
+<p>
+The Extension injects auto-fill values directly into the government portal's
+own web forms using standard DOM APIs. No holding, owner, or land data is
+routed through any Legend DEO server in this process.
+</p>
+
+<h2>4. Data Sharing and Third Parties</h2>
+<ul>
+  <li><strong>Google Firebase</strong> (Google Cloud infrastructure) — receives only your license key and an anonymous device UUID, used exclusively for license verification. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's privacy documentation</a>.</li>
+  <li>We do not sell or transfer your data to any other third party.</li>
+  <li>We do not share data for advertising or unrelated commercial purposes.</li>
+</ul>
+
+<h2>5. Data Retention and Deletion</h2>
+<p>
+Locally stored data (holding/owner information, settings) remains on your
+device until you delete it yourself — either through the Extension's own
+"reset" controls (available for each feature) or by removing the Extension /
+clearing your browser's extension storage from Chrome's settings.
+</p>
+<p>
+License-verification records (license key + device UUID) are retained on
+our license server for as long as the license remains active. You can
+request deletion of this record at any time using the contact details below.
+</p>
+
+<h2>6. Your Choices</h2>
+<ul>
+  <li>Every auto-fill feature in the Extension can be individually turned on or off from its settings panel.</li>
+  <li>You can clear all locally stored holding/owner data at any time using the in-extension "reset" buttons.</li>
+  <li>You can uninstall the Extension at any time from <code>chrome://extensions</code>, which removes its local storage from your browser.</li>
+</ul>
+
+<h2>7. Children's Privacy</h2>
+<p>
+The Extension is a professional tool intended for land-office data-entry
+staff and is not directed at children. We do not knowingly collect data
+from children.
+</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>
+We may update this policy as the Extension's features change. Material
+changes will be reflected by updating the "Last updated" date above.
+</p>
+
+<h2>9. Contact Us</h2>
+<div class="contact-box">
+  <p>If you have questions about this policy or want to request deletion of your license record, contact:</p>
+  <p><strong>Legend DEO</strong><br>
+  Phone/WhatsApp: 01303023504</p>
+</div>
+
+<footer>© Legend DEO. All rights reserved.</footer>
+
+</body>
+</html>
