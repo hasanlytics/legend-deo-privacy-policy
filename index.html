@@ -1,152 +1,85 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Legend DEO</title>
 <style>
-  body {
-    font-family: 'Segoe UI', 'Noto Sans Bengali', Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-    line-height: 1.7;
-    color: #222;
-    background: #fff;
-  }
-  h1 { font-size: 28px; margin-bottom: 4px; color: #12633D; }
-  .updated { color: #777; font-size: 14px; margin-bottom: 32px; }
-  h2 { font-size: 20px; margin-top: 36px; color: #12633D; border-bottom: 2px solid #e3f0e7; padding-bottom: 6px; }
-  h3 { font-size: 16px; margin-top: 22px; }
-  p, li { font-size: 15px; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
-  th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: #f0faf4; color: #12633D; }
-  .contact-box { background: #f0faf4; border: 1px solid #cdeada; border-radius: 8px; padding: 16px 18px; margin-top: 10px; }
-  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
-  footer { margin-top: 60px; font-size: 13px; color: #999; text-align: center; }
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #222; }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.3em; margin-top: 1.8em; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+  .updated { color: #666; font-size: 0.9em; }
+  ul { padding-left: 1.3em; }
 </style>
 </head>
 <body>
 
-<h1>Privacy Policy — Legend DEO</h1>
-<p class="updated">Last updated: September 15, 2026</p>
+<h1>Privacy Policy for Legend DEO</h1>
+<p class="updated">Last updated: September 23, 2026</p>
 
-<p>
-Legend DEO ("the Extension", "we", "our") is a Chrome browser extension built to
-speed up and reduce errors in data-entry work on Bangladesh's land record
-portals — the Land Development Tax portal (<code>ldtax.gov.bd</code>) and the
-DLRMS backoffice portal (<code>backoffice.dlrms.land.gov.bd</code>). This policy
-explains what data the Extension accesses, how it is used, where it is stored,
-and who it is shared with.
-</p>
+<p>Legend DEO ("the Extension") is a Chrome extension developed to assist with land-record automation and referral tracking for Bangladeshi land administration workflows. This Privacy Policy explains what data the Extension and its companion admin panel collect, how that data is used, stored, and shared, and what choices you have regarding your data.</p>
 
-<h2>1. Summary</h2>
+<h2>1. Information We Collect</h2>
+<p>Legend DEO consists of a Chrome Extension and a companion website (registration/renewal pages, leaderboard, and admin panel). Depending on how you use them, we may collect:</p>
 <ul>
-  <li>All holding, khatian, mouja, owner-name, address, NID, phone, and land-share data you enter or copy stays <strong>only on your own device</strong>, inside your browser's local storage. We do not operate a server that receives or stores this information.</li>
-  <li>The only information transmitted off your device is a <strong>license key</strong> and an <strong>anonymous, randomly generated device identifier</strong>, used solely to verify that your license is valid and to enforce single-device use. This is prominently disclosed, with a link to this policy, in the Extension's own license-verification screen before you click "verify."</li>
-  <li>We do not sell, rent, or share your data with advertisers or data brokers. There is no advertising and no analytics/tracking of your browsing activity.</li>
+  <li><strong>Registration information (website):</strong> your name, email address, and (if you sign up through a referral) a referral/promo code, submitted when you register for a license or a free trial.</li>
+  <li><strong>Payment coordination details (website):</strong> the bKash, Nagad, or Rocket mobile wallet number you send payment from, used only to verify and match your payment to your registration. We do not collect wallet PINs or passwords, and we do not process payments ourselves — payments are made directly through bKash/Nagad/Rocket outside the Extension.</li>
+  <li><strong>License and device identifiers (Extension):</strong> a randomly generated device ID and your license key, sent to our server only to verify that your subscription is active and to prevent a single license from being used on multiple devices.</li>
+  <li><strong>Installation and browser identifiers (Extension):</strong> a randomly generated install ID and basic technical details (browser type, operating system, screen resolution) used to distinguish one installation from another for license verification and to distribute server load. These are not linked to your real-world identity beyond your license/registration record.</li>
+  <li><strong>Land-portal entry data you choose to sync (Extension, "Holding Pro" feature):</strong> if you enable the optional holding-entry automation feature, your typed username and the specific correction/entry rows you request are sent to our Google Sheets-based backend so the Extension can fetch your pending tasks and mark them done. Owner/holding data you type directly into government portal forms (e.g., name or address corrections) stays in your browser and is only transmitted when it is part of a task you explicitly queued through this feature.</li>
+  <li><strong>Admin login credentials (admin panel only):</strong> the administrator's email address, used to send a one-time password (OTP) for two-factor authentication when accessing the admin panel. This applies only to the site administrator, not regular users.</li>
+  <li><strong>Referral and commission data:</strong> referral counts, sub-referral chains, bonus/renewal records, and leaderboard rankings generated from registered users' activity.</li>
+</ul>
+<p>We do not knowingly collect national ID numbers, wallet passwords/PINs, or government portal login credentials.</p>
+
+<h2>2. How We Collect Information</h2>
+<p>Information is collected directly through:</p>
+<ul>
+  <li>Registration, trial, and renewal forms on our website (legenddeo.netlify.app).</li>
+  <li>The Extension's license-verification step, which runs automatically when you use it on a supported government portal.</li>
+  <li>The optional holding-entry automation feature, only when you actively enable and use it.</li>
 </ul>
 
-<h2>2. Data We Collect and Why</h2>
+<h2>3. How We Store Information</h2>
+<p>Collected data is stored in <strong>Google Firebase Realtime Database</strong> (asia-southeast1 region) and, for the optional holding-entry automation feature, in <strong>Google Sheets</strong> accessed via Google Apps Script. Firebase access rules and authentication restrict who can read this data. Administrative access to the admin panel is protected by email-based OTP two-factor authentication and an automatic session timeout after inactivity.</p>
 
-<table>
-  <tr>
-    <th>Data</th>
-    <th>Purpose</th>
-    <th>Where it is stored</th>
-  </tr>
-  <tr>
-    <td>Land holding data you copy/enter: holding number, khatian number, mouja, division/district/upazila, land survey type, ownership source, owner name(s), father's/husband's name, address, NID number, phone number, email, land ownership share, dag-area figures</td>
-    <td>To auto-fill repetitive fields on the ldtax.gov.bd and DLRMS holding/khatian entry and edit forms, and to let you re-use previously entered owner/holding profiles across multiple entries</td>
-    <td>Locally on your device only (<code>chrome.storage.local</code> / browser <code>localStorage</code>). Never sent to Legend DEO or any third-party server.</td>
-  </tr>
-  <tr>
-    <td>Extension settings and preferences (which features are on/off, default text values, saved comment templates, floating-button positions)</td>
-    <td>To remember your configuration between sessions</td>
-    <td>Locally on your device only</td>
-  </tr>
-  <tr>
-    <td>License key (that you purchase/receive) and a randomly generated device identifier (UUID, not linked to your name or identity)</td>
-    <td>To verify your license is active and to bind it to one device, preventing unauthorized sharing of a single license</td>
-    <td>Sent to our license-verification database (Google Firebase Realtime Database, hosted in the <code>asia-southeast1</code> region) over an encrypted connection. Stored there only for license-validation purposes.</td>
-  </tr>
-</table>
-
-<h3>What we do NOT collect</h3>
+<h2>4. How We Use Information</h2>
+<p>We use the information we collect to:</p>
 <ul>
-  <li>We do not collect your name, email, or any personal identity information tied to you as a person — only the license key you use and a random device ID.</li>
-  <li>We do not track which websites you visit outside of <code>ldtax.gov.bd</code>.</li>
-  <li>We do not use cookies, advertising identifiers, or third-party analytics/tracking scripts.</li>
-  <li>We do not read, collect, or transmit the content of any other webpage, file, email, or document on your computer.</li>
+  <li>Verify that a license is valid, active, and not already bound to another device.</li>
+  <li>Calculate and display referral and commission earnings, and maintain the leaderboard.</li>
+  <li>Verify administrator identity when accessing the admin panel.</li>
+  <li>Match incoming bKash/Nagad/Rocket payments to the correct registration for license activation or renewal.</li>
+  <li>Deliver and track your queued holding-entry automation tasks, if you use that feature.</li>
 </ul>
+<p>We do <strong>not</strong> sell, rent, or use collected data for advertising, and we do not use it for any purpose beyond operating the features described above.</p>
 
-<h2>3. How Data Is Handled</h2>
-<p>
-Data you type into the Extension's panels (owner names, addresses, holding numbers, etc.)
-is written directly to your browser's built-in local storage APIs
-(<code>chrome.storage.local</code> and <code>window.localStorage</code>).
-This storage is sandboxed to your browser profile and is not accessible to
-Legend DEO, to other websites, or to other extensions. It is only read back
-by the Extension itself to fill forms on the ldtax.gov.bd site on your
-instruction (e.g., clicking a checkbox or a fill/entry button).
-</p>
-<p>
-The Extension injects auto-fill values directly into the government portal's
-own web forms using standard DOM APIs. No holding, owner, or land data is
-routed through any Legend DEO server in this process.
-</p>
-
-<h2>4. Data Sharing and Third Parties</h2>
+<h2>5. How We Share Information</h2>
+<p>We share limited information with the following third-party service providers, solely to operate the functions described above:</p>
 <ul>
-  <li><strong>Google Firebase</strong> (Google Cloud infrastructure) — receives only your license key and an anonymous device UUID, used exclusively for license verification. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's privacy documentation</a>.</li>
-  <li>We do not sell or transfer your data to any other third party.</li>
-  <li>We do not share data for advertising or unrelated commercial purposes.</li>
+  <li><strong>Google Firebase</strong> — stores license, device, referral, and commission records.</li>
+  <li><strong>Google Sheets / Google Apps Script</strong> — stores and serves holding-entry automation task data, only for users who enable that optional feature.</li>
+  <li><strong>EmailJS</strong> — delivers OTP emails for admin two-factor authentication. Only the admin's email address and a generated OTP code are sent to EmailJS.</li>
+  <li><strong>Netlify</strong> — hosts our website and admin panel files (no personal data is stored by Netlify itself).</li>
 </ul>
+<p>We do not share user data with any other third party, and we do not share data for marketing or advertising purposes. We may disclose information if required by law or to protect the rights, property, or safety of our users or the public.</p>
 
-<h2>5. Data Retention and Deletion</h2>
-<p>
-Locally stored data (holding/owner information, settings) remains on your
-device until you delete it yourself — either through the Extension's own
-"reset" controls (available for each feature) or by removing the Extension /
-clearing your browser's extension storage from Chrome's settings.
-</p>
-<p>
-License-verification records (license key + device UUID) are retained on
-our license server for as long as the license remains active. You can
-request deletion of this record at any time using the contact details below.
-</p>
+<h2>6. Data Retention and Deletion</h2>
+<p>We retain referral, commission, and account data for as long as necessary to operate the referral and leaderboard system, or until the user requests deletion. Users may request deletion of their data at any time by contacting us using the email address below. Upon request, we will delete the applicable records from our Firebase database within a reasonable time frame.</p>
 
-<h2>6. Your Choices</h2>
-<ul>
-  <li>Every auto-fill feature in the Extension can be individually turned on or off from its settings panel.</li>
-  <li>You can clear all locally stored holding/owner data at any time using the in-extension "reset" buttons.</li>
-  <li>You can uninstall the Extension at any time from <code>chrome://extensions</code>, which removes its local storage from your browser.</li>
-</ul>
+<h2>7. Data Security</h2>
+<p>We take reasonable measures to protect stored data, including Firebase App Check (reCAPTCHA Enterprise) to prevent unauthorized API access, restricted database access rules, and two-factor authentication for administrative accounts. However, no method of electronic storage or transmission is 100% secure, and we cannot guarantee absolute security.</p>
 
-<h2>7. Children's Privacy</h2>
-<p>
-The Extension is a professional tool intended for land-office data-entry
-staff and is not directed at children. We do not knowingly collect data
-from children.
-</p>
+<h2>8. Children's Privacy</h2>
+<p>The Extension and admin panel are not directed at children under 13, and we do not knowingly collect personal information from children.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>
-We may update this policy as the Extension's features change. Material
-changes will be reflected by updating the "Last updated" date above.
-</p>
+<h2>9. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.</p>
 
-<h2>9. Contact Us</h2>
-<div class="contact-box">
-  <p>If you have questions about this policy or want to request deletion of your license record, contact:</p>
-  <p><strong>Legend DEO</strong><br>
-  Phone/WhatsApp: 01834152609</p>
-</div>
-
-<footer>© Legend DEO. All rights reserved.</footer>
+<h2>10. Contact Us</h2>
+<p>If you have questions about this Privacy Policy, or wish to request access to or deletion of your data, please contact us at:</p>
+<p><strong>Email:</strong> <a href="mailto:hasanakas007@gmail.com">hasanakas007@gmail.com</a></p>
 
 </body>
 </html>
